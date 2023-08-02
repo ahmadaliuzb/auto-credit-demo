@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/auto_credit_db
+    username: postgres
+    password: ahmadali1976
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  token:
+    validity: 100000
+    prefix: Bearer
+  signing:
+    key: akh
+  authorities:
+    key: akh
+  header:
+    string: Authorization
+
+
+
+
